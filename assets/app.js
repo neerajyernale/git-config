@@ -1,5 +1,9 @@
 const cl = console.log;
 const todoList = document.getElementById('todoList');
+const addTodoBtn = document.getElementById('addTodoBtn');
+const updateTodoBtn = document.getElementById('updateTodoBtn');
+
+let EDIT_ID = null;
 
 let todoArr = [
     {
@@ -55,3 +59,17 @@ function createArr(arr) {
 }
 
 createArr(todoArr);
+
+// EDIT
+function onEdit(ele){
+    EDIT_ID = ele.closest('li').id;
+
+    let EDIT_OBJ = todoArr.find(todo =>{
+        return todo.todoId === EDIT_ID
+    });
+
+    todoItemControl.value = EDIT_OBJ.todoItem;
+
+    addTodoBtn.classList.add('d-none');
+    updateTodoBtn.classList.remove('d-none');
+}
