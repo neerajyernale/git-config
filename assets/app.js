@@ -1,5 +1,6 @@
 const cl = console.log;
 const todoList = document.getElementById('todoList');
+const todoForm = document.getElementById('todoForm');
 
 let todoArr = [
     {
@@ -55,3 +56,34 @@ function createArr(arr) {
 }
 
 createArr(todoArr);
+
+// / UPDATE
+function onTodoUpdate(){
+    let updatedValue = todoItemControl.value;
+
+    let getIndex = todoArr.findIndex(todo =>{
+        return todo.todoId === EDIT_ID
+    });
+
+    // update array
+    todoArr[getIndex].todoItem = updatedValue;
+
+    // update UI
+    let li = document.getElementById(EDIT_ID);
+    li.querySelector('strong').innerText = updatedValue;
+
+    // reset
+    todoForm.reset();
+    addTodoBtn.classList.remove('d-none');
+    updateTodoBtn.classList.add('d-none');
+
+    Swal.fire({
+        title: `Todo updated successfully !!!`,
+        timer: 3000,
+        icon: 'success'
+    });
+}
+
+// EVENTS
+
+updateTodoBtn.addEventListener('click', onTodoUpdate);
