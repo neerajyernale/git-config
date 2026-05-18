@@ -95,6 +95,12 @@ function onformSubmit(eve){
                     </div>`
 
     todoList.appendChild(li);
+
+    Swal.fire({
+        title: `A new todo ${newtodo.todoItem} added succesfully!`,
+        timer : 3000,
+        icon : 'success'
+    })
 }
 
 
