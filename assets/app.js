@@ -1,5 +1,7 @@
 const cl = console.log;
 const todoList = document.getElementById('todoList');
+const todoForm = document.getElementById('todoForm');
+const todoItemControl = document.getElementById('todoItem');
 
 let todoArr = [
     {
@@ -55,3 +57,21 @@ function createArr(arr) {
 }
 
 createArr(todoArr);
+
+// / REMOVE
+function onRemove(ele){
+    let REMOVE_ID = ele.closest('li').id;
+
+    let getIndex = todoArr.findIndex(todo =>{
+        return todo.todoId === REMOVE_ID
+    });
+
+    let removedTodo = todoArr.splice(getIndex,1);
+    ele.closest('li').remove();
+
+    Swal.fire({
+        title: `The Todo item ${removedTodo[0].todoItem} removed successfully !!!`,
+        timer: 3000,
+        icon: 'success'
+    });
+}
