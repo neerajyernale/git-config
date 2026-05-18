@@ -16,11 +16,7 @@ let todoArr = [
     }
 ];
 
-if (localStorage.getItem('todoArr')) {
-    todoArr = JSON.parse(localStorage.getItem('todoArr'));
-} else {
-    localStorage.setItem('todoArr', JSON.stringify(todoArr));
-}
+
 
 function createArr(arr) {
 
