@@ -61,7 +61,7 @@ function createArr(arr) {
 createArr(todoArr);
 
 // EDIT
-function onEdit(ele){
+function onTodoEdit(ele){
     EDIT_ID = ele.closest('li').id;
 
     let EDIT_OBJ = todoArr.find(todo =>{
