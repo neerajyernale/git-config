@@ -59,7 +59,7 @@ function createArr(arr) {
 createArr(todoArr);
 
 // / REMOVE
-function onRemove(ele){
+function onTodoRemove(ele){
     let REMOVE_ID = ele.closest('li').id;
 
     let getIndex = todoArr.findIndex(todo =>{
