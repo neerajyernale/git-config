@@ -1,7 +1,7 @@
 const cl = console.log;
 const todoList = document.getElementById('todoList');
 const addTodoBtn = document.getElementById('addTodoBtn');
-const updateTodoBtn = document.getElementById('updateTodoBtn');
+const updateBtn = document.getElementById('updateTodoBtn');
 
 let EDIT_ID = null;
 
