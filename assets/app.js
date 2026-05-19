@@ -1,7 +1,7 @@
 const cl = console.log;
 const todoList = document.getElementById('todoList');
-const addTodoBtn = document.getElementById('addTodoBtn');
-const updateBtn = document.getElementById('updateTodoBtn');
+const addtodobtn = document.getElementById('addtodobtn');
+const updatebtn = document.getElementById('updatebtn');
 
 let EDIT_ID = null;
 
@@ -70,6 +70,6 @@ function onEdit(ele){
 
     todoItemControl.value = EDIT_OBJ.todoItem;
 
-    addTodoBtn.classList.add('d-none');
-    updateTodoBtn.classList.remove('d-none');
+    addtodobtn.classList.add('d-none');
+    updatebtn.classList.remove('d-none');
 }
