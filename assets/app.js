@@ -59,23 +59,23 @@ createArr(todoArr);
 
 // / UPDATE
 function onTodoUpdate(){
-    let updatedValue = todoItemControl.value;
+    let updatedValue = todoitem.value;
 
     let getIndex = todoArr.findIndex(todo =>{
         return todo.todoId === EDIT_ID
     });
 
     // update array
-    todoArr[getIndex].todoItem = updatedValue;
+    todoArr[getIndex].todoitem = updatedValue;
 
     // update UI
     let li = document.getElementById(EDIT_ID);
     li.querySelector('strong').innerText = updatedValue;
 
     // reset
-    todoForm.reset();
-    addTodoBtn.classList.remove('d-none');
-    updateTodoBtn.classList.add('d-none');
+    todoform.reset();
+    addtodobtn.classList.remove('d-none');
+    updatebtn.classList.add('d-none');
 
     Swal.fire({
         title: `Todo updated successfully !!!`,
@@ -86,4 +86,4 @@ function onTodoUpdate(){
 
 // EVENTS
 
-updateTodoBtn.addEventListener('click', onTodoUpdate);
+updatebtn.addEventListener('click', onTodoUpdate);
