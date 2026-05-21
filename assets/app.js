@@ -66,7 +66,7 @@ function onTodoUpdate(){
     });
 
     // update array
-    todoArr[getIndex].todoitem = updatedValue;
+    todoArr[getIndex].todoItem = updatedValue;
 
     // update UI
     let li = document.getElementById(EDIT_ID);
