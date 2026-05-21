@@ -62,7 +62,7 @@ function onTodoUpdate(){
     let updatedValue = todoitem.value;
 
     let getIndex = todoArr.findIndex(todo =>{
-        return todo.todoId === EDIT_ID
+        return todo.id === EDIT_ID
     });
 
     // update array
