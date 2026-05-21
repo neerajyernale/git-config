@@ -65,7 +65,7 @@ function onTodoEdit(ele){
     EDIT_ID = ele.closest('li').id;
 
     let EDIT_OBJ = todoArr.find(todo =>{
-        return todo.todoId === EDIT_ID
+        return todo.id === EDIT_ID
     });
 
     todoitem.value = EDIT_OBJ.todoitem;
