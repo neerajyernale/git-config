@@ -68,7 +68,7 @@ function onTodoEdit(ele){
         return todo.id === EDIT_ID
     });
 
-    todoitem.value = EDIT_OBJ.todoItem;
+    todoitem.value = EDIT_OBJ.todoitem;
 
     addtodobtn.classList.add('d-none');
     updatebtn.classList.remove('d-none');
