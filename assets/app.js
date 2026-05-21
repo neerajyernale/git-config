@@ -58,18 +58,18 @@ function createArr(arr) {
 createArr(todoArr);
 
 // / UPDATE
-function onTodoUpdate() {
+function onTodoUpdate(){
     let updatedValue = todoitem.value;
 
     let getIndex = todoArr.findIndex(todo =>{
-        return todo.todoId === EDIT_ID
+        return todo.todoID === EDIT_ID
     });
 
     // update array
     todoArr[getIndex].todoitem = updatedValue;
 
     // update UI
-    let li = document.getElementById(EDIT_ID); 
+    let li = document.getElementById(EDIT_ID);
     li.querySelector('strong').innerText = updatedValue;
 
     // reset
